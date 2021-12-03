@@ -1,0 +1,14 @@
+If it's doing real-time data augmentation, why is that an issue? 
+Every time you call the fit it is creating new batches of images 
+using the ImageDataGenerator, which is doing random transformations 
+to each image based on ranges of values given to it. Newly 
+augmented--unique--images would be being used to train the model.
+
+
+
+
+In file Analysis.txt give a short description of the hyperparameters you tried, 
+and the outcomes you saw, including the hyperparameter set you decided on, 
+including channels per convo layer and any regularization or dropout. Discuss 
+the data augmentation you used. Include also the final accuracy obtained in 
+MNISTClassify.py
